@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="introStyle.css">
+    <title>Background Video</title>
+</head>
+<body>
+    <div id="fadeScreen"></div>
+    <div class="video-container">
+        <video autoplay muted loop playsinline id="videos">
+            <source src="/reso/vid/0001-0250.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <video id="transitionVideo" src="/reso/vid/RGSchant.mp4" preload="auto"></video>
+    <div class="light-effect"></div> <!-- Light Effect Element -->
+    <div class="content">
+       <button class="custom-button" onclick="login()">start</button>
+       <button id="skip-button" onclick="skip()">SKIP</button>
+    </div>
+    
+    <script src="introScript.js"></script> <!-- JavaScript file -->
+</body>
+</html>

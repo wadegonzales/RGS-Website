@@ -1,0 +1,398 @@
+
+body {
+    height: 100vh;
+    background-color: black;
+  }
+
+.wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+
+#matchesNav::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  transform: skew(-15deg);
+  z-index: -1;
+  background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
+}
+
+#matchesNav:hover{
+  color: black;
+}
+
+#matchesNav:hover::before{
+  opacity: 0;
+}
+
+.scrollUpButt{
+  border-radius: 100px;
+  position: fixed;
+  bottom: 10px;
+  right: 150px;
+  width: 50px;
+  height: 50px;
+  border: solid 1px #111111;
+  z-index: 1;
+  color: black;
+  background-color: #ff6600fb;
+  margin-bottom: 55px;
+  transition: .3s;
+}
+
+
+
+  .interface{
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    height: 85vh;
+    transform: translateY(400px);
+    position: relative;
+    inset: 0%;
+    background-color: #202020;
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), 
+    transform 1s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth easing */
+    transition-delay: 0s; /* Initial delay is 0 */
+  }
+
+  .imgGrain{
+    height: 100%;
+    width: 100%;
+    opacity: .3;
+    mix-blend-mode: soft-light;
+    background-image: url(https://cdn.prod.website-files.com/64bf6e8cda9043babe7ca006/6654552ec96e94b02ee62f85_noisy-texture-100x100-o100-d10-c-ffffff-t0.webp);
+    background-position: 0 0;
+    z-index: 1000;
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    position: absolute;
+    inset: 0%;
+  }
+
+  .imgPattern{
+    height: 100%;
+    width: 100%;
+    opacity: .12;
+    mix-blend-mode: multiply;
+    background-image: url(https://cdn.prod.website-files.com/64bf6e8cda9043babe7ca006/668f747f2436f0b465928ebb_wave2.svg);
+    background-position: 0 0;
+    background-size: 800px 800px;
+    position: absolute;
+    inset: 0%;
+  }
+
+  .slides{
+    position: relative;
+  }
+
+  .bilbord{
+    object-fit: cover;
+    height: 35rem;
+    border-radius: 40px;
+  }
+
+  .slideText{
+    position: absolute;
+  }
+
+  .hold{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
+  }
+
+  .gameIcons{
+    height: 6em;
+    transition: .2s;
+  }
+
+  .matchGameWrapper{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+
+  .matchGame{
+    width: 100%;
+    height: 50%;
+    display: flex;
+  }
+
+  .navBar{
+    box-shadow: 0 5px 10px 5px #111111;
+
+  }
+  .gameName{
+    opacity: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .interface.visible{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .gameName:hover{
+    box-shadow: inset 0 0 20px 10px #111111;
+  }
+  
+  .dotaSec {
+    display: none;
+}
+.dotaSec.active {
+    display: block;
+}
+
+  section{
+    height: 100vh;
+    width: 100%;
+  }
+
+  .dotaSec{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border-top: 1px solid black;
+    background-color: black;
+    background-image: url(/reso/dotted-grid.svg);
+  }
+
+  .dotaSec::before{
+    bottom: 0;
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    
+  }
+
+  h1{
+    font-size: 60px;
+    z-index: 1;
+    position: relative;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
+  }
+
+  .headMatchHis{
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1% 10%;
+    z-index: 1;
+    background-color: black;
+    background-image: linear-gradient(transparent, black);
+  }
+
+  .dotaHead{
+    opacity: .3;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .miyaHead{
+    width: 100%;
+    opacity: .3;
+    top: 0;
+    left: 0;
+    object-position: 0 -230px;
+    position: absolute;
+  }
+
+  .hokHead{
+    width: 100%;
+    opacity: .3;
+    top: 0;
+    left: 0;
+    object-position: 0 -190px;
+    position: absolute;
+  }
+
+  .tekHead{
+    width: 100%;
+    opacity: .3;
+    top: 0;
+    left: 0;
+    object-position: 0 -230px;
+    position: absolute;
+  }
+
+  .valoHead{
+    width: 100%;
+    opacity: .3;
+    top: 0;
+    left: 0;
+    object-position: 0 -70px;
+    position: absolute;
+  }
+
+  .codmHead{
+    width: 100%;
+    opacity: .3;
+    top: 0;
+    left: 0;
+    object-position: 0 -300px;
+    position: absolute;
+  }
+
+
+
+
+
+
+  .dotaGrid{
+    padding: 2% 10%;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: center;
+    display: grid;
+    color: white;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+  }
+
+  .match-glow{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  
+  .match1{
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(50%);
+    border: #202020 1px solid;
+    display: flex;
+    position: relative;
+    background-color: #111111;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), 
+    transform 1s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth easing */
+    transition-delay: 0s; /* Initial delay is 0 */
+  }
+
+ 
+
+  .match1::before{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    background-color: rgba(255, 255, 255, 0);
+    transition: .3s;
+  }
+
+  .match1:hover::before{
+    box-shadow: 0 0 8px 5px #ff66008f;
+  }
+
+  .match1.visibles{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .MatchHead{
+    padding: 15px;
+    width: 100%;
+    font-size: 1.3em;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
+    overflow: hidden;
+    transition: .3s;
+    white-space: nowrap;
+    }
+
+  .MatchStanding{
+    box-shadow: inset 0 0 10px 5px #1a1a1a;
+    width: 100%;
+    height: 100%;
+    background-color: #252525;
+    display: flex;
+    transition: .3s;
+  }
+
+  .match1:hover .MatchStanding {
+    color: #ff6600; /* Change MatchHead color */
+    background-color: #383838;
+  }
+  .match1:hover .MatchHead {
+    padding: 15px;
+    width: 100%;
+    font-size: 1.3em;
+    -webkit-text-fill-color: black;
+    background-clip: border-box;
+    color: black;
+    background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+
+  .team1, .team2{
+    
+
+    gap: 2px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .team1{
+    border-right: 1px #111111 solid;
+  }
+
+  .teamName{
+    font-size:1rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 100%;
+  }
+
+  .teamScore{
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /*
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(rgb(41, 0, 0), rgb(0, 0, 0));
+
+
+
+
+

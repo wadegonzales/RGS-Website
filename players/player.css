@@ -1,0 +1,434 @@
+body {
+    height: 100vh;
+    background-color: #000000;
+    transition: filter 0.5s ease-in-out; /* Smooth transition for background filter */
+  }
+
+* {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+
+.wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+#playerNav::before{ 
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  transform: skew(-15deg);
+  z-index: 1111;
+  background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
+}
+
+.navBar{
+  box-shadow: 0 5px 10px 5px #111111;
+}
+
+#playerNav:hover::before{
+  opacity: 0;
+}
+
+.blur-team-right{
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  backdrop-filter: blur(20px);
+  width: 9%;
+  z-index: 1;
+  left: 0;
+}
+
+h1{
+  color: #ff6600fb;
+}
+
+  .interface{
+    overflow: hidden;
+    background-color: #202020;
+    position: relative;
+    background-image: url(/reso/dotted-grid.svg);
+    top: 50%;
+    width: 100%;
+    padding: 0 8%;
+    transform: translateY(-57%);
+    height: 90vh;
+    transition: filter 0.5s ease-in-out; /* Smooth transition for darkening */
+    align-items: center;
+    display: flex;
+  }
+
+  .teamDescContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 20% 2%;
+    background-color: #111111;
+    width: 40%;
+    height: 100%;
+  }
+
+  .teamDescContainer .teamDesc {
+    width: 100%;
+    margin: 0 auto; 
+}
+
+.bottomDesc{
+  align-items: center;
+  gap: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30% 0 0 0;
+}
+
+.bottomDesc-pages{
+  width: 100%;
+  display: flex;
+  gap: 5%;
+  align-items: center;
+}
+.butts{
+  display: flex;
+  gap: 5px;
+}
+
+.line{
+  display: flex;
+  width: 100%;
+  height: 0;
+  border: solid #ff6600fb 1px;
+  color: #ff6600fb;
+}
+
+.cardFace{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.card-description{
+  left: -100%;
+  opacity: 1; /* Start with opacity 0 for fade-in effect */
+  transition:  0.5s ease-in-out; /* Add fade effect */
+  top: 50%;
+  transform: translate(-50%,-50%);
+  position: fixed;
+  z-index: 11;
+  height: 70%;
+  font-size: 50px;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  color: #ff6600fb;
+  background-color: #000000;
+  border: 1px solid #ff6600fb;
+  pointer-events: none;
+}
+
+ 
+.card-description.show {
+  transform: translate(-50%, -50%);
+  pointer-events: auto; /* Allow interactions */
+}
+
+
+.card-description-content{
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  white-space: nowrap;
+}
+
+.close-unskew{
+  transform: skew(25deg) translateX(12%);
+}
+
+.close-description{
+  transition: .3s;
+  transform: skew(-25deg);
+  left: -5%;
+  padding: 0 10%;  
+  text-align: start;
+  border: none;
+  position: absolute;
+  background-color: black;
+  color: #ff6600fb;
+  width: 50%;
+  font-size: 1.48rem;
+}
+
+.close-description:hover{
+  background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
+  background-color: transparent;
+}
+
+.ingame-name-container{
+  padding-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color:#ff6600fb;
+  flex-direction: column;
+}
+
+.ingame-name{
+  height: 3rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.ingame-name-line{
+  height: 1px;
+  width: 100%;
+  border: rgb(58, 58, 58) 1px solid;
+}
+
+.card-sheet{
+  overflow: hidden;
+  left: 10px;
+  position: absolute;
+  z-index: -1;
+  background-color: #000000;
+  height: 90%;
+  width: 98%;
+  transition: left 1s ease;
+  border: 1px solid #ff6600fb;
+}
+
+
+
+
+.team-unskew{
+  display: flex;
+  align-items: center;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
+  transform: skew(25deg);
+}
+
+.team-skew{
+  
+  background-color: #111111;
+  height: 100%;
+  padding: 3%;
+  transform: skew(-25deg);
+  display: flex;
+  align-items: center;
+}
+
+.card-sheet-head{
+  display: flex;
+  height: 10%;
+  align-items: center;
+  justify-content: center;
+  border-left: solid #ff6600fb 1px;
+  background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.ingame-name-skew{
+  padding-left: 3%;
+  display: flex;
+  font-size: 1.2rem;
+  position: relative;
+  transform: skew(-25deg) translateX(30%);
+  background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
+  width: 80%;
+  transition: .3s;
+  height: 100%;
+}
+
+.ingame-name-skew:hover{
+  transform: skew(-25deg) translate(25%, -5%);
+}
+
+.ingame-name-skew::before{
+  content: '';
+  background-color: #111111;
+  z-index: -1;
+  transform: translate(-4%, 0);
+  height: 101%;
+  width: 101%;
+  transition: .3s;
+  position: absolute;
+ }
+
+ .ingame-name-skew:hover::before{
+  transform: translate(-2%, -10%);
+ }
+
+ 
+
+.card-sheet.show {
+  pointer-events: auto;
+  left: -85%; /* Slide into view */
+}
+
+
+.currentTeamNumber, .maxNumber{
+  color: #ff6600fb;
+  font-size: 30px;
+}
+
+.card{
+  transform-origin: center;
+  transition: all .5s;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.close-description{
+  gap: 0;
+  height: 1.8em;
+}
+
+.join-button{
+  width: auto;
+}
+
+button:hover{
+  color: black;
+ 
+
+}
+
+  .teamDesc{
+    padding: 10px 0;
+    font-family: exo; 
+    color: rgb(114, 114, 114);
+  }
+
+  .hold{
+    display: flex;
+    z-index: 1111111111;
+    gap: 8vmin;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transition: .3s ease-in-out;
+    transform: translate(0%, -50%);
+  }
+  
+  .player{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    transform: scale(1.0) translateX(50%);
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), 
+    transform 1s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth easing */
+    transition-delay: 0s; /* Initial delay is 0 */
+  }
+ 
+  .slides{
+    position: relative;
+  }
+
+  .bilbord{
+    object-fit: cover;
+    height: 35rem;
+    border-radius: 40px;
+  }
+
+  .slideText{
+    position: absolute;
+  }
+
+
+  .headPlayer{
+    background-color: #000000;
+    padding: 5px;
+    color: #ff6600fb;
+    border: #ff6600fb 1px solid;
+    width: 100%;
+  }
+
+ 
+
+  .player.visibles{
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+
+  .player.scaled {
+    transform: scale(1.1);
+  }
+
+  .polygon{
+    display: flex;
+    bottom: 0;
+    position: relative;
+    justify-content: center;
+    height: 90%;
+    background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
+    align-items: center;
+    width: 100%;
+    z-index: 1111;
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%,0 80%,10% 70%,10% 30%,0 20%);
+  }
+
+  .gameIconContainer{
+    position: absolute;
+    background-color: #111111;
+    height: 100%;    
+    clip-path: polygon(.5% .5%, 99.5% .5%, 99.5% 99.5%, .5% 99.5%, .5% 80%, 10.5% 70.5%, 10.5% 30%, .5% 20%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+  }
+
+  .gameIconContainer:hover{
+    background-color: #222222fb;
+  }
+
+
+  .val{
+    object-fit: cover;
+    height: 50px;
+  }
+
+
+  .B{
+    background-color: transparent;
+    background-image: url(/pattern.svg);
+    width: 10rem;
+  }
+
+
+  #t8{
+    height: 60px;
+  }
+
+  /*
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(rgb(41, 0, 0), rgb(0, 0, 0));
+
+
+
+
+
