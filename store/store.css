@@ -5,17 +5,15 @@
   box-sizing: border-box;
 }
 
-.wrapper{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
+body{
+  background-color: black;
+
 }
 
-section{
+.interfaceStore{
     z-index: -1;
-    background-color: black;
     position: relative;
-    top: 40%;
+    top: 45%;
     width: 100%;
     transform: translateY(-50%);
     height: 100vh;
@@ -49,7 +47,6 @@ section{
     width: 100%;
     overflow: hidden;
     height: 100vh;
-    border-radius: 30px;
     z-index: 1;
   }
 
@@ -101,12 +98,39 @@ section{
   }
 
 
-  .store-header{
+ /*.merchImg{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
     position: absolute;
-    top: 0;
+    border-radius: 5px;
+    border-bottom: #ff6600fb 1px solid;
+  }*/
+  .product-wrapper{
+    width: 100%;
+    padding: 5%;
+    height: 80vh;
+  }
+
+  .merch{
+
+    background-color: black;
+    min-height: 100vh;
     display: flex;
+    position: relative;
     justify-content: center;
-    height: 10%;
+    align-items: center;
+    padding: 5% 10%;
+  }
+
+  .store-header{
+    text-transform: uppercase;
+    position: absolute;
+    top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5%;
     overflow: visible;
     width: 100%;
     z-index: 111;
@@ -133,8 +157,8 @@ section{
     background-color: #1a1a1a;
     height: 100%;
     transform: translate(-.2%,-2%) skew(-45deg);
-    width: 40%;
-    background-image: url(/pattern.svg);
+    width: 30%;
+    background-image: url(../pattern.svg);
   }
 
   
@@ -142,33 +166,11 @@ section{
     position: absolute;
     background-clip: text;
     color: #ff6600;
-    font-size: 2.5rem;
-    top: 0;
-
+    font-size: 1.5rem;
     padding: 20px;
   }
 
 
- /*.merchImg{
-    height: 25rem;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    border-radius: 5px;
-    border-bottom: #ff6600fb 1px solid;
-  }*/
-  .product-wrapper{
-    width: 100%;
-    padding: 5%;
-    height: 90vh;
-  }
-
-  .merch{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
   .prod-container .prod{
     cursor: pointer;
@@ -205,7 +207,7 @@ section{
   }
   
   .swiper .swiper-pagination-bullet-active {
-    background-color: #ff3300; 
+    color: #ff6600;
     opacity: 1; 
     transform: skewX(-45deg) scale(1.3);
   }
