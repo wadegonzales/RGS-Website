@@ -29,7 +29,7 @@ function login(){
   
       // Step 3: Navigate to the new page after the video ends
       transitionVideo.addEventListener("ended", () => {
-        window.location.href = "homepage.html"; // Replace with your desired URL
+        window.location.href = "./homepage.html"; // Replace with your desired URL
       });
     }, 1000); // Match the fade-in duration
 }
