@@ -5,7 +5,7 @@ const originalText = button.textContent.toLowerCase();
 const skips = document.getElementById('skip-button');
 
 function skip(){
-    window.location.href = "homepage.html";
+    window.location.href = "./homepage.html";
 }
 ;
 
