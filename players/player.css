@@ -54,7 +54,7 @@ h1{
     overflow: hidden;
     background-color: #202020;
     position: relative;
-    background-image: url(/reso/dotted-grid.svg);
+    background-image: url(../reso/dotted-grid.svg);
     top: 50%;
     width: 100%;
     padding: 0 8%;
@@ -179,14 +179,85 @@ h1{
   flex-direction: column;
 }
 
+.ingame-name:hover > .profile-container{
+  right: -29%;
+  opacity: 1;
+  transform: skew(-25deg) translateY(0%);
+}
+
+.player-profile{
+  opacity: 1;
+  z-index: 22221;
+  position: absolute;
+  height: 6rem;
+  filter: saturate(.5);
+  object-fit: cover;
+  transition: .3s;
+  transform: translate(10%, -33%) skew(25deg);
+}
+
+.profile-container{
+  border: 1px solid #111111;
+  box-shadow: 1px -5px 10px 2px black;
+  transition: .3s;
+  bottom: 0;
+  opacity: 0;
+  right: -50%;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 141%;
+  background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
+  transform: skew(-25deg) translateY(10%);
+  /* background-image: linear-gradient(transparent, #ff6600); */
+}
+
+.ingame-name:hover > #idenP{
+  right: -40%;
+}
+
+#idenP{
+  right: -70%;
+}
+
+.ingame-name:hover > #johnP{
+  right: -40%;
+}
+
+#johnP{
+  right: -70%;
+}
+
+.ingame-name:hover > #angP{
+  right: -35%;
+}
+
+#angP{
+  right: -70%;
+}
+
+
+#angProfile{
+  transform: translate(50%, -10%) skew(25deg);
+}
+
+.profile-gradient{
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  z-index: 1000;
+}
 .ingame-name{
   height: 3rem;
   display: flex;
   width: 100%;
   align-items: center;
+  position: relative;
   justify-content: center;
-  
+  padding-left: 50%;
 }
+
 
 .ingame-name-line{
   height: 1px;
@@ -207,19 +278,15 @@ h1{
 }
 
 
-
-
 .team-unskew{
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
   transform: skew(25deg);
 }
 
 .team-skew{
-  
   background-color: #111111;
   height: 100%;
   padding: 3%;
@@ -240,35 +307,54 @@ h1{
   width: 100%;
 }
 
-.ingame-name-skew{
+
+
+.ingame-name-skew.front{
   padding-left: 3%;
   display: flex;
   font-size: 1.2rem;
-  position: relative;
-  transform: skew(-25deg) translateX(30%);
-  background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
-  width: 80%;
+  position: absolute;
+  transform: skew(-25deg);
+  background-color: #111111;
+  width: 100%;
   transition: .3s;
   height: 100%;
 }
 
-.ingame-name-skew:hover{
-  transform: skew(-25deg) translate(25%, -5%);
+
+.ingame-name:hover > .ingame-name-skew.front{
+  transform: skew(-25deg) translate(-2.5%, -20%);
 }
 
-.ingame-name-skew::before{
-  content: '';
-  background-color: #111111;
+.ingame-name:hover > .ingame-name-skew.back{
+  opacity: 1;
+  transform: skew(-25deg) translate(2.5%, 20%);
+}
+
+
+.ingame-name-skew.back{
+  opacity: 0;
+  left: 15%;
+  background-image: linear-gradient(45deg,#ff6600fb,#a21c01,#f3c017);
   z-index: -1;
-  transform: translate(-4%, 0);
-  height: 101%;
-  width: 101%;
+  transform: skew(-25deg) translateY(1%);
+  height: 100%;
+  width: 100%;
+  padding: 0;
   transition: .3s;
   position: absolute;
  }
 
- .ingame-name-skew:hover::before{
-  transform: translate(-2%, -10%);
+ #long-back{
+  left: 5%;
+ }
+
+ .team-unskew.back{
+  font-size: 1em;
+  color: black;
+  position: absolute;
+  bottom: 0;
+  left: 2%;
  }
 
  
@@ -414,7 +500,7 @@ button:hover{
 
   .B{
     background-color: transparent;
-    background-image: url(/pattern.svg);
+    background-image: url(../pattern.svg);
     width: 10rem;
   }
 
