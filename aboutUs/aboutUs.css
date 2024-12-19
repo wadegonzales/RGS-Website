@@ -524,7 +524,7 @@ body {
   position: absolute;
   transform: rotate(-8deg);
   height: 15%;
-  z-index: 11;
+  z-index: 1;
   width: 120%;
   bottom: 4.5%;
   background-color: rgb(0, 0, 0);
